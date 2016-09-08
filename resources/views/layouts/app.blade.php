@@ -24,29 +24,20 @@
             margin-right: 6px;
         }
         
-        .navbar-default{background-color:#ac2925}
+        .navbar-default{background:linear-gradient( #ac2925,#ac2925,white); height: 15%; }
         
     </style>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top" >
         <div class="container">
-            <div class=" navbar-header " id="nav" >
-
-                <!-- Collapsed Hamburger -->
-                
-
-                <!-- Branding Image -->
-                <a class="navbar-brand glyphicon glyphicon-star" style=" color: white ;font-size: 23px;" href="{{ url('/') }}">
-                    Bear Project
+            <div class=" navbar-header " id="nav" style=" ">
+                <a class="navbar-brand glyphicon" style=" color: white ;font-size: 23px;" href="{{ url('/') }}">
+                   <img src="images/icon.png" alt="Smiley face" height="120" width="150">
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse" >
-                <!-- Left Side Of Navbar -->
-<!--                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>-->
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right" style=" width: 60%;">
@@ -69,20 +60,8 @@
                                 </ul>
                          </div>
                     </li>
-                    <li style=" color: white; font-size: 23px;width: 30%;">
-                        <div class="dropdown" style=" float: left; margin-top: 5%; ">
-                            <button class="btn btn-primary dropdown-toggle glyphicon glyphicon-pencil" style=" background-color: #d43f3a" type="button" data-toggle="dropdown"> Insert New Record
-                            <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Insert Bears Record</a></li>
-                                    <li><a href="#">Insert Bears-Picnic Record</a></li>
-                                    <li><a href="#">Insert Fish Record</a></li>
-                                    <li><a href="#">Insert Picnic Record</a></li>
-                                    <li><a href="#">Insert Tree Record</a></li>
-                                </ul>
-                        </div>
-                    </li>
-                    <li style=" color: white; font-size: 23px;width: 33%;">
+                  
+                    <li style=" color: white; font-size: 23px;width: 33%; float: right;">
                         <div style=" float: right; ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"  style=" color: white; font-size: 23px; float: right" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret" ></span>
@@ -102,9 +81,9 @@
             </div>
         </div>
     </nav>
-
+    <div >
     @yield('content')
-    
+    </div>
    
 
     <!-- JavaScripts -->
